@@ -1,0 +1,79 @@
+{
+    "name": "thibautgobert/filament-syncfusion-rich-text",
+    "description": "Syncfusion Rich Text Field for Filament 3 Form",
+    "keywords": [
+        "filament",
+        "filament-form-field",
+        "filament-field",
+        "filament-rich-text",
+        "filament-wysiwyg",
+        "filament-code-editor",
+        "filament-codemirror",
+        "code-editor",
+        "codemirror",
+        "laravel",
+        "wysiwyg",
+        "rich-text"
+    ],
+    "homepage": "https://github.com/thibautgobert/filament-syncfusion-rich-text",
+    "support": {
+        "issues": "https://github.com/thibautgobert/filament-syncfusion-rich-text",
+        "source": "https://github.com/thibautgobert/filament-syncfusion-rich-text"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thibaut Gobert",
+            "email": "thibaut.gobert@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-package-tools": "^1.15.0",
+        "illuminate/contracts": "^11.0"
+    },
+    "require-dev": {
+        "filament/filament": "^3.0",
+        "nunomaduro/collision": "^8.0",
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThibautGobert\\FilamentSyncfusionRichText\\": "src/",
+            "ThibautGobert\\FilamentSyncfusionRichText\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ThibautGobert\\FilamentSyncfusionRichText\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ThibautGobert\\FilamentSyncfusionRichText\\FilamentSyncfusionRichTextServiceProvider"
+            ],
+            "aliases": {
+                "FilamentSyncfusionRichText": "ThibautGobert\\FilamentSyncfusionRichText\\Facades\\FilamentSyncfusionRichText"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

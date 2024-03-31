@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:styles:base": "npx tailwindcss -i resources/css/base.css -o resources/dist/filament-syncfusion-rich-text-base.css --postcss --watch",
+    "dev:styles:light": "npx tailwindcss -i resources/css/light.css -o resources/dist/filament-syncfusion-rich-text-light.css --postcss --watch",
+    "dev:styles:dark": "npx tailwindcss -i resources/css/dark.css -o resources/dist/filament-syncfusion-rich-text-dark.css --postcss --watch",
+    "dev:styles": "npm-run-all --parallel dev:styles:*",
+    "dev:scripts": "node bin/build.js --dev",
+    "build:styles:base": "npx tailwindcss -i resources/css/base.css -o resources/dist/filament-syncfusion-rich-text-base.css --postcss --minify && npm run purge-base",
+    "build:styles:light": "npx tailwindcss -i resources/css/light.css -o resources/dist/filament-syncfusion-rich-text-light.css --postcss --minify && npm run purge-light",
+    "build:styles:dark": "npx tailwindcss -i resources/css/dark.css -o resources/dist/filament-syncfusion-rich-text-dark.css --postcss --minify && npm run purge-dark",
+    "build:styles": "npm-run-all --parallel build:styles:*",
+    "build:scripts": "node bin/build.js",
+    "purge-base": "filament-purge -i resources/dist/filament-syncfusion-rich-text-base.css -o resources/dist/filament-syncfusion-rich-text-base.css -v 3.x",
+    "purge-light": "filament-purge -i resources/dist/filament-syncfusion-rich-text-light.css -o resources/dist/filament-syncfusion-rich-text-light.css -v 3.x",
+    "purge-dark": "filament-purge -i resources/dist/filament-syncfusion-rich-text-dark.css -o resources/dist/filament-syncfusion-rich-text-dark.css -v 3.x",
+    "dev": "npm-run-all --parallel dev:*",
+    "build": "npm-run-all build:*"
+  },
+  "devDependencies": {
+    "@awcodes/filament-plugin-purge": "^1.1.1",
+    "@tailwindcss/forms": "^0.5.4",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.19.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.26",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.15.0",
+    "@codemirror/commands": "^6.3.3",
+    "@codemirror/lang-html": "^6.4.8",
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.26.0",
+    "@emmetio/codemirror6-plugin": "^0.3.0",
+    "@syncfusion/ej2-base": "^25.1.35",
+    "@syncfusion/ej2-richtexteditor": "^25.1.35",
+    "esbuild-plugin-sass": "^1.0.1",
+    "marked": "^12.0.1"
+  }
+}

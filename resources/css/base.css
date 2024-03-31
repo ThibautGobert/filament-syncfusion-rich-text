@@ -1,0 +1,42 @@
+@import '../../vendor/filament/filament/resources/css/theme.css';
+
+.syncfusion-rich-text-wrapper-wrapper, .syncfusion-rich-text-wrapper-wrapper .content{
+    @apply relative rounded-md shadow-sm ring-1 focus-within:!ring-2 focus-within:!ring-primary-600;
+}
+
+.syncfusion-rich-text-wrapper.base, .syncfusion-rich-text-wrapper.base .content{
+    @apply ring-gray-950/10 dark:ring-white/20 rounded-lg;
+}
+
+.syncfusion-rich-text-wrapper.danger, .syncfusion-rich-text-wrapper.danger .content{
+    @apply ring-danger-600 dark:ring-danger-600;
+}
+.syncfusion-rich-text  .e-toolbar {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.syncfusion-rich-text .e-richtexteditor.e-rte-tb-expand .e-rte-toolbar.e-extended-toolbar,
+.syncfusion-rich-text  .e-richtexteditor.e-rte-tb-expand .e-rte-toolbar .e-toolbar-extended {
+    border: transparent;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.e-richtexteditor .e-toolbar-wrapper.e-rte-tb-float, .e-richtexteditor .e-toolbar-container.e-rte-tb-float {
+    border: transparent;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 1px;
+    overflow: visible;
+}
+.syncfusion-rich-text, .syncfusion-rich-text .content {
+    @apply w-full h-full rounded-lg;
+}
+.syncfusion-rich-text .e-toolbar .e-toolbar-items {
+    border-top-left-radius:  0.5rem;
+}
+.syncfusion-rich-text .e-rte-content {
+    border-bottom-left-radius:  0.5rem;
+    border-bottom-right-radius:  0.5rem;
+}
