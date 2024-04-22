@@ -45,7 +45,7 @@
             style="min-height: {{ $getHeight() }};"
             class="syncfusion-rich-text"
         >
-            <textarea class="content"></textarea>
+            <textarea class="content {{$getUseBootstrap5ForStylingContent() ? 'bootstrap' : ''}}"></textarea>
         </div>
     </div>
 </x-dynamic-component>

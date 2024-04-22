@@ -33,9 +33,9 @@ class SyncfusionRichText extends Field
     protected ?array $insertImageSettings = null;
     protected ?array $insertVideoSettings = null;
 
-
-
     protected ?string $height = '16rem';
+
+    protected ?bool $useBootstrap5ForStylingContent = null;
 
     protected function setUp(): void
     {
@@ -91,6 +91,17 @@ class SyncfusionRichText extends Field
     public function getMode(): string
     {
         return $this->mode ?? config('filament-syncfusion-rich-text.mode');
+    }
+
+    public function useBootstrap5ForStylingContent(bool $useBootstrap5ForStylingContent = false)
+    {
+        $this->useBootstrap5ForStylingContent = $useBootstrap5ForStylingContent;
+        return $this;
+    }
+     public function getUseBootstrap5ForStylingContent()
+    {
+        return $this->useBootstrap5ForStylingContent ?? config('filament-syncfusion-rich-text.use-bootstrap5-for-styling-content');
+
     }
 
     public function insertImageSettings(?array $config)
