@@ -3,6 +3,7 @@
 
 return [
     'syncfusionLicenseKey' => env('SYNCFUSION_LICENSE_KEY'),
+    'use-bootstrap5-for-styling-content' => false,
     /*
      * HTML / Markdown
      */
