@@ -29,7 +29,7 @@ SYNCFUSION_LICENSE_KEY=your-license-key
 You can install the package via composer:
 
 ```bash
-composer require thibautgobert/syncfusion-rich-text
+composer require thibautgobert/filament-syncfusion-rich-text
 ```
 ## Usage
 
